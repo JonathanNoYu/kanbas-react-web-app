@@ -1,71 +1,166 @@
 <!DOCTYPE html>
 <html>
-<select>
-    <option>SpeedGrader</option>
-</select>
-<hr />
-<h3>Assignment Name</h3>
-<input value="A1 - ENV + HTML" />
-<br />
-<textarea>This is the description of the Assignment</textarea> <br />
-
-<label for="grade_points">Points</label> <br />
-<input id="grade_points" type="number" max="100" min="0" value="100" /> <br />
-
-<label>Assignment Group</label> <br />
-<select>
-    <option>ASSIGNMENT</option>
-</select> <br /> <br />
-
-<label>Display Grade as</label> <br />
-<select>
-    <option>Percentage</option>
-</select> <br /> <br />
-
-<label>Submission Type</label> <br />
-<select>
-    <option>Online</option>
-</select> <br /> <br />
-
-Online Entry Options <br />
-<label><input type="checkbox" /> Text Entry </label> <br />
-<label><input type="checkbox" /> Website URL </label> <br />
-<label><input type="checkbox" /> Media Recording </label> <br />
-<label><input type="checkbox" /> Annotaitons </label> <br />
-<label><input type="checkbox" /> Uploads </label> <br /> <br />
-
-<label>Submission Attents</label> <br />
-<select>
-    <option>Unlimited</option>
-</select> <br /> <br />
-
-<label>Plagiarism Review</label> <br />
-<select>
-    <option>None</option>
-</select> <br /> <br />
-
-<label>Assignment Group</label> <br />
-<input type="checkbox" /> This is a group assignment <br /> <br />
-
-<label>Peer Reviws</label> <br />
-<input type="checkbox" /> Require Peer Reviews <br /> <br />
-
-<label>Assign</label> <br />
-<label>Assign to</label> <br />
-<input type="text" value="Everyone" /> <br /> <br />
-
-<label>Due</label> <br />
-<input type="date" value="2021-01-01" /> <br /> <br />
-
-<label>Available from</label> <br />
-<input type="date" value="2021-01-01" /> <br /> <br />
-
-<label>Until</label> <br />
-<input type="date" value="2021-01-01" /> <br /> <br />
-
-<form action="\Kanbas\Assignment">
-    <button>Cancel</button>
-    <button>Save</button>
-</form>
-
+    <table width="100%" valgin="TOP">
+        <tr valgin="TOP">
+            <td valgin="top">
+                <ul>
+                    <li>
+                        <a href="\Kanbas\Account">Account</a>
+                    </li>
+                    <li>
+                        <a href="\Kanbas\KanbasNavigation">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="\Kanbas\Courses">Courses</a>
+                    </li>
+                    <li>
+                        <a href="#">Calendar</a>
+                    </li>
+                    <li>
+                        <a href="#">Inbox</a>
+                    </li>
+                    <li>
+                        <a href="#">History</a>
+                    </li>
+                    <li>
+                        <a href="#">Studio</a>
+                    </li>
+                    <li>
+                        <a href="#">Commons</a>
+                    </li>
+                    <li>
+                        <a href="#">Help</a>
+                    </li>
+                </ul>
+            </td>
+            <td valgin="top">
+                <ul>
+                    <li>
+                        <a href="\Kanbas\Courses\Home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Module</a>
+                    </li>
+                    <li>
+                        <a href="#">Piazza</a>
+                    </li>
+                    <li>
+                        <a href="#">Zoom Meetings</a>
+                    </li>
+                    <li>
+                        <a href="\Kanbas\Assignment">Assignment</a>
+                    </li>
+                    <li>
+                        <a href="#">Quizzes</a>
+                    </li>
+                    <li>
+                        <a href="\Kanbas\Courses\Grades">Grades</a>
+                    </li>
+                    <li>
+                        <a href="#">People</a>
+                    </li>
+                    <li>
+                        <a href="#">Panioto Video</a>
+                    </li>
+                    <li>
+                        <a href="#">Discussions</a>
+                    </li>
+                    <li>
+                        <a href="#">Announcements</a>
+                    </li>
+                    <li>
+                        <a href="#">Pages</a>
+                    </li>
+                    <li>
+                        <a href="#">Files</a>
+                    </li>
+                    <li>
+                        <a href="#">Rubrics</a>
+                    </li>
+                    <li>
+                        <a href="#">Outcomes</a>
+                    </li>
+                    <li>
+                        <a href="#">Collaborations</a>
+                    </li>
+                    <li>
+                        <a href="#">Syllabus</a>
+                    </li>
+                    <li>
+                        <a href="#">Settings</a>
+                    </li>
+                </ul>
+            </td>
+            <td valgin="top">
+                <select>
+                    <option>SpeedGrader</option>
+                </select>
+                <hr />
+                <h3>Assignment Name</h3>
+                <input value="A1 - ENV + HTML" />
+                <br />
+                <textarea>This is the description of the Assignment</textarea> <br />
+                
+                <label for="grade_points">Points</label> <br />
+                <input id="grade_points" type="number" max="100" min="0" value="100" /> <br />
+                
+                <label>Assignment Group</label> <br />
+                <select>
+                    <option>ASSIGNMENT</option>
+                </select> <br /> <br />
+                
+                <label>Display Grade as</label> <br />
+                <select>
+                    <option>Percentage</option>
+                </select> <br /> <br />
+                
+                <label>Submission Type</label> <br />
+                <select>
+                    <option>Online</option>
+                </select> <br /> <br />
+                
+                Online Entry Options <br />
+                <label><input type="checkbox" /> Text Entry </label> <br />
+                <label><input type="checkbox" /> Website URL </label> <br />
+                <label><input type="checkbox" /> Media Recording </label> <br />
+                <label><input type="checkbox" /> Annotaitons </label> <br />
+                <label><input type="checkbox" /> Uploads </label> <br /> <br />
+                
+                <label>Submission Attents</label> <br />
+                <select>
+                    <option>Unlimited</option>
+                </select> <br /> <br />
+                
+                <label>Plagiarism Review</label> <br />
+                <select>
+                    <option>None</option>
+                </select> <br /> <br />
+                
+                <label>Assignment Group</label> <br />
+                <input type="checkbox" /> This is a group assignment <br /> <br />
+                
+                <label>Peer Reviws</label> <br />
+                <input type="checkbox" /> Require Peer Reviews <br /> <br />
+                
+                <label>Assign</label> <br />
+                <label>Assign to</label> <br />
+                <input type="text" value="Everyone" /> <br /> <br />
+                
+                <label>Due</label> <br />
+                <input type="date" value="2021-01-01" /> <br /> <br />
+                
+                <label>Available from</label> <br />
+                <input type="date" value="2021-01-01" /> <br /> <br />
+                
+                <label>Until</label> <br />
+                <input type="date" value="2021-01-01" /> <br /> <br />
+                
+                <form action="\Kanbas\Assignment">
+                    <button>Cancel</button>
+                    <button>Save</button>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+    </table>
 </html>
