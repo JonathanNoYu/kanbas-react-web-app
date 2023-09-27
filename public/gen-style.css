@@ -1,0 +1,89 @@
+.course-nav{
+    color: red;
+    margin-left: 10px;
+}
+
+ul.course-nav .list-group-item{
+    border: none;
+    color: red;
+    background-color: white;
+}
+
+ul.course-nav .list-group-item:hover{
+    border: none;
+    color: red;
+    background-color: white;
+    text-decoration: underline;
+}
+
+ul.course-nav .list-group-item:active{
+    color: black;
+    background-color: white;
+    border: none;
+    border-left: 2px solid black;
+    text-decoration: solid;
+}
+
+.red_link:link, .red_link:visited, .red_link:hover {
+    justify-content: center;
+    text-decoration: none; 
+    color: red;
+}
+
+.white_link:link, .white_link:visited, .white_link:hover{
+    justify-content: center;
+    text-decoration: none; 
+    color: white;
+}
+
+.red_link:active {
+    color: red;
+}
+
+.wd-kanbas-nav {
+    background-color: black;
+    float: left;
+    color: white;
+    max-width: 80px;
+    min-width: 75px;
+    border: none;
+}
+
+.menu_item {
+    color: red;
+    width: 100%;
+}
+
+.menu_item i{
+    color: red;
+    padding: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.menu_item a{
+    padding: 7px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.menu_item i:active {
+    color: grey;
+}
+
+.active {
+    background-color: white;
+    color: red;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
