@@ -27,30 +27,29 @@ body{
     padding-top: 16px;
 }
 
-.course-nav{
+.gen-nav{
     list-style-type: none;
     color: red;
-    
     max-width: 200px;
     min-width: 190px;
 }
 
-ul.course-nav .list-group-item{
-    padding-left: 0px;
+ul.gen-nav .list-group-item{
+    padding-left: 4px;
     border: none;
     color: red;
     border-left: none;
     background-color: white;
 }
 
-ul.course-nav .list-group-item:hover{
+ul.gen-nav .list-group-item:hover{
     border: none;
     color: red;
     background-color: white;
     text-decoration: underline;
 }
 
-ul.course-nav .list-group-item:active{
+ul.gen-nav .list-group-item:active{
     color: black;
     background-color: white;
     border: none;
@@ -111,10 +110,14 @@ ul.course-nav .list-group-item:active{
 
 .account_icon i {
     color: white;
+    padding-top: 15px;
 }
 
-.account_icon .grey i {
+.account_icon i.grey {
     color: grey;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 12px;
 }
 
 .active {
