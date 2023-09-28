@@ -5,6 +5,12 @@ body{
     margin: 0px;
     display: flex;
     float:left;
+    font-family: "Lato Extended","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -57,6 +63,10 @@ ul.gen-nav .list-group-item:active{
     text-decoration: solid;
 }
 
+.neu-logo{
+    padding: 15px;
+}
+
 .red_link:link, .red_link:visited, .red_link:hover {
     justify-content: center;
     text-decoration: none; 
@@ -77,7 +87,7 @@ ul.gen-nav .list-group-item:active{
     background-color: black;
     float: left;
     color: white;
-    width: 85px;
+    width: 84px;
     max-width: 85px;
     min-width: 75px;
     border: none;
@@ -91,7 +101,7 @@ ul.gen-nav .list-group-item:active{
 
 .menu_item i{
     color: red;
-    padding: 7px;
+    padding: 5px;
     padding-left: 0px;
     padding-right: 0px;
     margin: 5px;
@@ -100,12 +110,13 @@ ul.gen-nav .list-group-item:active{
 }
 
 .menu_item a{
-    padding: 7px;
+    padding: 5px;
     padding-left: 0px;
     padding-right: 0px;
     margin: 5px;
     margin-left: 0px;
     margin-right: 0px;
+    font-size: 14px;
 }
 
 .account_icon i {
