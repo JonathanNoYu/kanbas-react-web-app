@@ -22,7 +22,7 @@ hr {
 .right-row-pane {
     flex-direction: row;
     flex-grow: 1;
-    margin-left: 25px;
+    margin-left: 109px;
 }
 
 .content-pane {
@@ -69,7 +69,7 @@ ul.gen-nav .list-group-item:hover{
     text-decoration: underline;
 }
 
-ul.gen-nav .list-group-item:active{
+ul.gen-nav .list-group-item:active, ul.gen-nav .active{
     color: black;
     background-color: white;
     border: none;
@@ -99,12 +99,13 @@ ul.gen-nav .list-group-item:active{
 
 .wd-kanbas-nav {
     background-color: black;
-    float: left;
     color: white;
     width: 84px;
     max-width: 85px;
     min-width: 75px;
     border: none;
+    position: fixed;
+    height: 100vh;
 }
 
 .menu_item {
