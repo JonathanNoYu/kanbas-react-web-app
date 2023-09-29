@@ -1,0 +1,30 @@
+.top-container {
+    padding: 16px;
+    padding-left: 4px;
+}
+
+.top-text {
+    color: black;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.dashboard-pane {
+    padding: 10px;
+}
+
+.dashboard-card-container {
+    padding: 15px;
+}
+
+.card {
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    width: 262px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 36px 0 0 36px;
+}

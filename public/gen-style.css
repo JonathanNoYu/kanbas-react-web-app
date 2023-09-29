@@ -1,10 +1,10 @@
 body{
+    font-size: 16px;
     height: 100vh;
     width: 100vw;
     padding: 0px;
     margin: 0px;
     display: flex;
-    float:left;
     font-family: "Lato Extended","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -17,7 +17,6 @@ hr {
     padding: 0px;
     margin: 0px;
     width: 100vw;
-    flex-wrap: wrap;
 }
 
 .right-row-pane {
@@ -26,16 +25,31 @@ hr {
     margin-left: 25px;
 }
 
+.content-pane {
+    padding: 24px;
+}
+
+.top-container {
+    padding: 16px;
+    padding-left: 4px;
+}
+
+.top-text {
+    color: #d12e2e;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
 .course-nav-menu-btn{
-    color: red;
+    color: #d12e2e;
     background-color: white;
     border: none;
-    padding-top: 16px;
+    margin-right: 12px;
 }
 
 .gen-nav{
     list-style-type: none;
-    color: red;
+    color: #d12e2e;
     max-width: 200px;
     min-width: 190px;
 }
@@ -43,14 +57,14 @@ hr {
 ul.gen-nav .list-group-item{
     padding-left: 4px;
     border: none;
-    color: red;
+    color: #d12e2e;
     border-left: none;
     background-color: white;
 }
 
 ul.gen-nav .list-group-item:hover{
     border: none;
-    color: red;
+    color: #d12e2e;
     background-color: white;
     text-decoration: underline;
 }
@@ -70,7 +84,7 @@ ul.gen-nav .list-group-item:active{
 .red_link:link, .red_link:visited, .red_link:hover {
     justify-content: center;
     text-decoration: none; 
-    color: red;
+    color: #d12e2e;
 }
 
 .white_link:link, .white_link:visited, .white_link:hover{
@@ -80,7 +94,7 @@ ul.gen-nav .list-group-item:active{
 }
 
 .red_link:active {
-    color: red;
+    color: #d12e2e;
 }
 
 .wd-kanbas-nav {
@@ -94,13 +108,13 @@ ul.gen-nav .list-group-item:active{
 }
 
 .menu_item {
-    color: red;
+    color: #d12e2e;
     width: 100%;
     text-align: center;
 }
 
 .menu_item i{
-    color: red;
+    color: #d12e2e;
     padding: 5px;
     padding-left: 0px;
     padding-right: 0px;
@@ -131,9 +145,15 @@ ul.gen-nav .list-group-item:active{
     padding-bottom: 12px;
 }
 
+.account_icon {
+    padding: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .active {
     background-color: white;
-    color: red;
+    color: #d12e2e;
 }
 
 .center {
