@@ -93,7 +93,6 @@ ul.wd-gen-nav .list-group-item:active, ul.wd-gen-nav .wd-active{
 .wd-kanbas-nav {
     background-color: black;
     color: white;
-    width: 84px;
     max-width: 85px;
     min-width: 75px;
     border: none;
