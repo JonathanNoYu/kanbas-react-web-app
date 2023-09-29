@@ -1,9 +1,5 @@
 body{
     font-size: 16px;
-    height: 100vh;
-    width: 100vw;
-    padding: 0px;
-    margin: 0px;
     display: flex;
     font-family: "Lato Extended","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -13,48 +9,48 @@ hr {
     padding: 0;
 }
 
-.container {
+.wd-container {
     padding: 0px;
     margin: 0px;
-    width: 100vw;
 }
 
-.right-row-pane {
+.wd-right-row-pane {
     flex-direction: row;
     flex-grow: 1;
     margin-left: 109px;
 }
 
-.content-pane {
+.wd-content-pane {
     padding: 24px;
+    padding-right: 0;
 }
 
-.top-container {
+.wd-top-container {
     padding: 16px;
     padding-left: 4px;
 }
 
-.top-text {
+.wd-top-text {
     color: #d12e2e;
     margin-left: 10px;
     font-size: 20px;
 }
 
-.course-nav-menu-btn{
+.wd-course-nav-menu-btn{
     color: #d12e2e;
     background-color: white;
     border: none;
     margin-right: 12px;
 }
 
-.gen-nav{
+.wd-gen-nav{
     list-style-type: none;
     color: #d12e2e;
     max-width: 200px;
     min-width: 190px;
 }
 
-ul.gen-nav .list-group-item{
+ul.wd-gen-nav .list-group-item{
     padding-left: 4px;
     border: none;
     color: #d12e2e;
@@ -62,14 +58,11 @@ ul.gen-nav .list-group-item{
     background-color: white;
 }
 
-ul.gen-nav .list-group-item:hover{
-    border: none;
-    color: #d12e2e;
-    background-color: white;
+ul.wd-gen-nav .list-group-item:hover{
     text-decoration: underline;
 }
 
-ul.gen-nav .list-group-item:active, ul.gen-nav .active{
+ul.wd-gen-nav .list-group-item:active, ul.wd-gen-nav .wd-active{
     color: black;
     background-color: white;
     border: none;
@@ -77,23 +70,23 @@ ul.gen-nav .list-group-item:active, ul.gen-nav .active{
     text-decoration: solid;
 }
 
-.neu-logo{
+.wd-neu-logo{
     padding: 15px;
 }
 
-.red_link:link, .red_link:visited, .red_link:hover {
+.wd-red_link:link, .wd-red_link:visited, .wd-red_link:hover {
     justify-content: center;
     text-decoration: none; 
     color: #d12e2e;
 }
 
-.white_link:link, .white_link:visited, .white_link:hover{
+.wd-white_link:link, .wd-white_link:visited, .wd-white_link:hover{
     justify-content: center;
     text-decoration: none; 
     color: white;
 }
 
-.red_link:active {
+.wd-red_link:active {
     color: #d12e2e;
 }
 
@@ -108,13 +101,13 @@ ul.gen-nav .list-group-item:active, ul.gen-nav .active{
     height: 100vh;
 }
 
-.menu_item {
+.wd-menu_item {
     color: #d12e2e;
     width: 100%;
     text-align: center;
 }
 
-.menu_item i{
+.wd-menu_item i{
     color: #d12e2e;
     padding: 5px;
     padding-left: 0px;
@@ -124,7 +117,7 @@ ul.gen-nav .list-group-item:active, ul.gen-nav .active{
     margin-right: 0px;
 }
 
-.menu_item a{
+.wd-menu_item a{
     padding: 5px;
     padding-left: 0px;
     padding-right: 0px;
@@ -134,30 +127,30 @@ ul.gen-nav .list-group-item:active, ul.gen-nav .active{
     font-size: 14px;
 }
 
-.account_icon i {
+.wd-account_icon i {
     color: white;
     padding-top: 15px;
 }
 
-.account_icon i.grey {
+.wd-account_icon i.wd-grey {
     color: grey;
     margin: 0px;
     padding-top: 20px;
     padding-bottom: 12px;
 }
 
-.account_icon {
+.wd-account_icon {
     padding: 5px;
     padding-left: 0px;
     padding-right: 0px;
 }
 
-.active {
+.wd-active {
     background-color: white;
     color: #d12e2e;
 }
 
-.center {
+.wd-center {
     display: flex;
     justify-content: center;
     justify-self: center;

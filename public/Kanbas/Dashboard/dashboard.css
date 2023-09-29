@@ -1,20 +1,21 @@
-.top-container {
+.wd-top-container {
     padding: 16px;
     padding-left: 4px;
 }
 
-.top-text {
+.wd-top-text {
     color: black;
     margin-left: 10px;
     font-size: 30px;
 }
 
-.dashboard-pane {
+.wd-dashboard-pane {
     padding: 10px;
 }
 
-.dashboard-card-container {
+.wd-dashboard-card-container {
     padding: 15px;
+    flex-wrap: wrap;
 }
 
 .card {
