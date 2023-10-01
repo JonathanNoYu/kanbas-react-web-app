@@ -7,6 +7,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="../../../gen-style.css" rel="stylesheet">
+    <link href="profile.css" rel="stylesheet">
 </head>
 <title>
     Kanbas Profile 
@@ -67,7 +68,7 @@
                         <i class="fa-solid fa-bars fa-xl"></i>
                     </button>
                     <div class="wd-top-text">
-                        Jonathan's Profile
+                        Jonathan Yu's Profile
                     </div>
                 </div>
                 <hr />
@@ -103,12 +104,14 @@
                     </li>
                 </ul>
                 <div class="wd-content-pane">
-                    <form action="\Kanbas\Account\Profile\edit.html">
-                        <font size="+7">Jonathan
-                            Yu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </font>
-                        <button>Edit Profile</button>
-                    </form>
+                    <div class="d-flex justify-content-between wd-profile">
+                        <i class="fa-regular fa-circle-user wd-huge-icon wd-center wd-grey"></i>
+                        <form class="wd-profile-form" action="\Kanbas\Account\Profile\edit.html">
+                            <button class="wd-profile-btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Profile</button>
+                        </form>
+                    </div>
+                    Jonathan Yu
+                    
                     <br />
                     <h2>Contact</h2>
                     <p> No registered services, you can add some on the <a href="#">settings</a> page.</p>

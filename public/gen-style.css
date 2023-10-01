@@ -23,6 +23,7 @@ hr {
 .wd-content-pane {
     padding: 24px;
     padding-right: 0;
+    min-width: 300px;
 }
 
 .wd-top-container {
@@ -48,6 +49,7 @@ hr {
     color: #d12e2e;
     max-width: 200px;
     min-width: 190px;
+    flex-wrap: wrap;
 }
 
 ul.wd-gen-nav .list-group-item{
