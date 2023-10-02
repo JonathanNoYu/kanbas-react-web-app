@@ -252,3 +252,11 @@ ul.wd-gen-nav .list-group-item:active, ul.wd-gen-nav .wd-active{
     -webkit-user-select: none;
     user-select: none;
 }
+
+i.wd-green{
+    color:rgb(43, 197, 43);
+}
+
+.breadcrumb-item:hover{
+    color:#d12e2e;
+}
