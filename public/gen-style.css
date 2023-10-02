@@ -151,6 +151,10 @@ ul.wd-gen-nav .list-group-item:active, ul.wd-gen-nav .wd-active{
     color: #d12e2e;
 }
 
+.wd-red{
+    color: #d12e2e;
+}
+
 .wd-center {
     display: flex;
     justify-content: center;
