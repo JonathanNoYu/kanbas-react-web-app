@@ -1,0 +1,27 @@
+.wd-semester-text{
+    font-size: 0.6875rem;
+    padding: 0 0 12px 12px;
+}
+
+.wd-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col {
+    margin-right: 20px;
+}
+
+.col .list-group {
+    border-radius: 0px;
+}
+
+a{
+    color: #d12e2e;
+    text-decoration: none;
+}
+
+i.fa-solid{
+    color:rgb(43, 197, 43);
+}

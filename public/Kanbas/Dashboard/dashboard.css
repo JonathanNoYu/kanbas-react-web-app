@@ -29,3 +29,30 @@
     vertical-align: top;
     margin: 36px 0 0 36px;
 }
+
+.wd-card-rectangle {
+    box-sizing: border-box;
+    height: 146px;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.wd-card-title {
+    font-size: 16px;
+    color: rgb(80, 80, 204);
+    margin-bottom: 1px;
+}
+
+a{
+    color: none;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #d12e2e;
+    text-decoration: underline;
+}
+
+.card-text {
+    font-size: 16px;
+    color: black;
+}
