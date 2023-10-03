@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
     <link href="../../gen-style.css" rel="stylesheet">
+    <link href="../Courses/Home/home.css" rel="stylesheet">
+    <link href="assignment.css" rel="stylesheet">
 </head>
 <title>
     Kanbas Assignment
@@ -15,7 +21,7 @@
 <body>
 
     <body>
-        <div class="wd-container d-flex flex-row">
+        <div class="wd-container d-flex flex-row w-100">
             <div class="wd-kanbas-nav ">
                 <div class="wd-menu_item wd-neu-logo d-none d-xl-block">
                     <a href="">
@@ -70,7 +76,7 @@
                         Help</a>
                 </div>
             </div>
-            <div class="wd-right-row-pane d-flex flex-column">
+            <div class="wd-right-row-pane d-flex flex-column w-100">
                 <div class="wd-top-pane">
                     <div class="wd-top-container d-flex flex-row align-middle">
                         <button class="wd-course-nav-menu-btn">
@@ -144,95 +150,149 @@
                             <a class="list-group-item" href="#">Settings</a>
                         </li>
                     </ul>
-                    <div class="wd-content-pane">
-                        <input type="text" placeholder="Search for Assignment" />
-                        <button>Group</button>
-                        <button>Assignment</button>
-                        <select>
-                            <option>Edit Assignment Dates</option>
-                        </select>
-                        <hr />
-                        <font size="+2"> <b>ASSIGNMENTS 40% of Total</b></font>
-                        <select>
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                        </select> <br />
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">A1 - ENV + HTML<br /> Multiple
-                                Modules</a> | Not available yet</li>
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">A2 - CSS + BOOTSTRAP<br />
-                                Multiple
-                                Modules</a> | Not available yet</li>
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">A3 - JS + REACT<br /> Multiple
-                                Modules</a> | Not available yet</li>
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">A4 - STATE + REDUX<br /> Multiple
-                                Modules</a> | Not available yet</li>
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">A5 - NODE + SESSION<br /> Multiple
-                                Modules</a> | Not available yet</li>
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">A6 - MONGO + MONGOOSE<br />
-                                Multiple
-                                Modules</a> | Not available yet</li>
-                        <font size="+2"> <b>QUIZZES 10% of Total</b></font>
-                        <select>
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                        </select> <br />
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">Q1 - HTML<br /> Multiple
-                                Modules</a> |
-                            Not available yet</li>
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">Q2 - CSS<br /> Multiple
-                                Modules</a> |
-                            Not available yet</li>
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">Q3 - JS, ES6<br /> Multiple
-                                Modules</a> | Not available yet</li>
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">Q4 - NODE<br /> Multiple
-                                Modules</a> |
-                            Not available yet</li>
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">Q5 - MONGO<br /> Multiple
-                                Modules</a>
-                            | Not available yet</li>
-                        <font size="+2"> <b>EXAMS 20% of Total</b></font>
-                        <select>
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                        </select> <br />
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">Midterm<br /> Multiple Modules</a>
-                            |
-                            Not available yet</li>
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">Final<br /> Multiple Modules</a> |
-                            Not
-                            available yet</li>
-                        <font size="+2"> <b>PROJECT 30% of Total</b></font>
-                        <select>
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                        </select> <br />
-                        <li><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">Project<br /> Multiple Modules</a>
-                            |
-                            Not available yet</li>
+                    <div class="wd-content-pane w-75">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <input class="form-control w-25" type="text" placeholder="Search for Assignment" />
+                                <div>
+                                    <button class="btn btn-secondary btn-sm"><i class="fa fa-plus px-1" aria-hidden="true"></i>Group</button>
+                                    <button class="btn btn-danger btn-sm"><i class="fa fa-plus px-1" aria-hidden="true"></i>Assignment</button>
+                                    <button class="btn btn-secondary btn-sm"><i class="fa fa-ellipsis-v fa-xl mt-2" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            <hr class="mt-2"/>
+                        </div>
+                        <div class="list-group my-3">
+                            <a class="list-group-item list-group-item-secondary" role="button" data-bs-toggle="collapse" href="#assignments" role="button" aria-expanded="false"
+                            aria-controls="assignments">ASSIGNMENTS 40% of Total
+                                <select class="float-end">
+                                    <option>Edit</option>
+                                    <option>Speed Grader</option>
+                                    <option>Duplicate</option>
+                                    <option>Delete</option>
+                                    <option>Move To...</option>
+                                    <option>Send To...</option>
+                                    <option>Copy To...</option>
+                                    <option>Share to Commons</option>
+                                </select> <br /></a>
+                            <div class="collapse" id="assignments">
+                                <li class="list-group-item"><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">
+                                    <i class="fa-solid fa-grip-vertical pe-3 text-success"></i>
+                                        <i class="fa-regular fa-pen-to-square pe-3 text-success"></i>A1 -
+                                        ENV + HTML<br /> Multiple
+                                        Modules</a> | Not available yet</li>
+                                <li class="list-group-item"><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">
+                                    <i class="fa-solid fa-grip-vertical pe-3 text-success"></i>
+                                        <i class="fa-regular fa-pen-to-square pe-3 text-success"></i>A2 -
+                                        CSS + BOOTSTRAP<br />
+                                        Multiple
+                                        Modules</a> | Not available yet</li>
+                                <li class="list-group-item"><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">
+                                    <i class="fa-solid fa-grip-vertical pe-3 text-success"></i>
+                                        <i class="fa-regular fa-pen-to-square pe-3 text-success"></i>A3 -
+                                        JS + REACT<br /> Multiple
+                                        Modules</a> | Not available yet</li>
+                                <li class="list-group-item"><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">
+                                    <i class="fa-solid fa-grip-vertical pe-3 text-success"></i>
+                                        <i class="fa-regular fa-pen-to-square pe-3 text-success"></i>A4 -
+                                        STATE + REDUX<br /> Multiple
+                                        Modules</a> | Not available yet</li>
+                                <li class="list-group-item"><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">
+                                    <i class="fa-solid fa-grip-vertical pe-3 text-success"></i>
+                                        <i class="fa-regular fa-pen-to-square pe-3 text-success"></i>A5 -
+                                        NODE + SESSION<br /> Multiple
+                                        Modules</a> | Not available yet</li>
+                                <li class="list-group-item"><a href="\Kanbas\Assignment\AssignmentEditor\editor.html">
+                                    <i class="fa-solid fa-grip-vertical pe-3 text-success"></i>
+                                        <i class="fa-regular fa-pen-to-square pe-3 text-success"></i>A6 -
+                                        MONGO + MONGOOSE<br />
+                                        Multiple
+                                        Modules</a> | Not available yet</li>
+                            </div>
+                        </div>
+                        <div class="list-group mb-3">
+                            <a class="list-group-item list-group-item-secondary" role="button" data-bs-toggle="collapse" href="#quizzes" role="button" aria-expanded="false"
+                            aria-controls="quizzes">QUIZZES 10% of Total <select
+                                    class="float-end">
+                                    <option>Edit</option>
+                                    <option>Speed Grader</option>
+                                    <option>Duplicate</option>
+                                    <option>Delete</option>
+                                    <option>Move To...</option>
+                                    <option>Send To...</option>
+                                    <option>Copy To...</option>
+                                    <option>Share to Commons</option>
+                                </select></a>
+                            <div class="collapse" id="quizzes">
+                                <li class="list-group-item ps-4"><a
+                                        href="\Kanbas\Assignment\AssignmentEditor\editor.html">Q1 - HTML<br /> Multiple
+                                        Modules</a> |
+                                    Not available yet</li>
+                                <li class="list-group-item ps-4"><a
+                                        href="\Kanbas\Assignment\AssignmentEditor\editor.html">Q2 - CSS<br /> Multiple
+                                        Modules</a> |
+                                    Not available yet</li>
+                                <li class="list-group-item ps-4"><a
+                                        href="\Kanbas\Assignment\AssignmentEditor\editor.html">Q3 - JS, ES6<br /> Multiple
+                                        Modules</a> | Not available yet</li>
+                                <li class="list-group-item ps-4"><a
+                                        href="\Kanbas\Assignment\AssignmentEditor\editor.html">Q4 - NODE<br /> Multiple
+                                        Modules</a> |
+                                    Not available yet</li>
+                                <li class="list-group-item ps-4"><a
+                                        href="\Kanbas\Assignment\AssignmentEditor\editor.html">Q5 - MONGO<br /> Multiple
+                                        Modules</a>
+                                    | Not available yet</li>
+                            </div>
+                        </div>
+                        <div class="list-group mb-3">
+                            <a class="list-group-item list-group-item-secondary" role="button" data-bs-toggle="collapse" href="#exams" role="button" aria-expanded="false"
+                            aria-controls="exams">EXAMS 20% of Total
+                                <select class="float-end">
+                                    <option>Edit</option>
+                                    <option>Speed Grader</option>
+                                    <option>Duplicate</option>
+                                    <option>Delete</option>
+                                    <option>Move To...</option>
+                                    <option>Send To...</option>
+                                    <option>Copy To...</option>
+                                    <option>Share to Commons</option>
+                                </select></a>
+                            <div class="collapse" id="exams">
+                                <li class="list-group-item ps-4"><a
+                                        href="\Kanbas\Assignment\AssignmentEditor\editor.html">Midterm<br /> Multiple
+                                        Modules</a>
+                                    |
+                                    Not available yet</li>
+                                <li class="list-group-item ps-4"><a
+                                        href="\Kanbas\Assignment\AssignmentEditor\editor.html">Final<br /> Multiple
+                                        Modules</a> |
+                                    Not
+                                    available yet</li>
+                            </div>
+                        </div>
+                        <div class="list-group mb-3">
+                            <a class="list-group-item list-group-item-secondary"  role="button" data-bs-toggle="collapse" href="#project" role="button" aria-expanded="false"
+                            aria-controls="project">PROJECT 30% of Total <select
+                                    class="float-end">
+                                    <option>Edit</option>
+                                    <option>Speed Grader</option>
+                                    <option>Duplicate</option>
+                                    <option>Delete</option>
+                                    <option>Move To...</option>
+                                    <option>Send To...</option>
+                                    <option>Copy To...</option>
+                                    <option>Share to Commons</option>
+                                </select></a>
+
+                            <div class="collapse" id="project">
+                                <li class="list-group-item ps-4"><a
+                                        href="\Kanbas\Assignment\AssignmentEditor\editor.html">Project<br /> Multiple
+                                        Modules</a>
+                                    |
+                                    Not available yet</li>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

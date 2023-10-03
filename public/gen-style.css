@@ -9,6 +9,10 @@ hr {
     padding: 0;
 }
 
+.list-group{
+    border-radius: 0px;
+}
+
 .wd-container {
     padding: 0px;
     margin: 0px;
@@ -259,4 +263,28 @@ i.wd-green{
 
 .breadcrumb-item:hover{
     color:#d12e2e;
+}
+
+.wd-semester-text{
+    font-size: 0.6875rem;
+    padding: 0 0 12px 12px;
+}
+
+.wd-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col {
+    margin-right: 20px;
+}
+
+.col .list-group {
+    border-radius: 0px;
+}
+
+a{
+    color: #d12e2e;
+    text-decoration: none;
 }
