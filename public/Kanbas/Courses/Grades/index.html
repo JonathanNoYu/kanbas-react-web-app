@@ -22,7 +22,7 @@
 </title>
 
 <body>
-    <div class="wd-container d-flex flex-row">
+    <div class="wd-container d-flex flex-row w-100">
         <div class="wd-kanbas-nav ">
             <div class="wd-menu_item wd-neu-logo">
                 <a href="">
@@ -86,15 +86,15 @@
                     <div class="wd-top-text">
                         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                             <ol class="breadcrumb m-0">
-                              <li class="breadcrumb-item"><a href="#">CS 4550</a></li>
-                              <li class="breadcrumb-item active" aria-current="page">Grades</li>
+                                <li class="breadcrumb-item"><a href="#">CS 4550</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Grades</li>
                             </ol>
                         </nav>
                     </div>
                 </div>
                 <hr />
             </div>
-            <div class="wd-right-column-plane d-flex">
+            <div class="wd-right-column-plane d-flex w-100">
                 <ul class="wd-gen-nav list-group pt-4">
                     <div class="wd-semester-text wd-ellipsis text-secondary">
                         202410_1 Fall 2023 Semester
@@ -154,21 +154,27 @@
                         <a class="list-group-item" href="#">Settings</a>
                     </li>
                 </ul>
-                <div class="wd-content-pane d-flex flex-column">
-                    <div class="float-end">
-                        <button>Import</button>
-                        <select>
-                            <option>Export</option>
-                        </select>
-                        <button>Configure</button>
+                <div class="wd-content-pane d-flex flex-column w-100">
+                    <div class="mb-2">
+                        <button class="btn btn-secondary float-end"><i class="fa-solid fa-gear text-white"></i></button>
+                        <button class="btn btn-secondary float-end mx-1"><i
+                                class="fa-solid fa-file-export text-white"></i> Export</button>
+                        <button class="btn btn-secondary float-end"><i class="fa-solid fa-file-import text-white"></i>
+                            Import</button>
                     </div>
-                    <div class="d-flex flex-row my-2">
-                        <h3>Student Names</h3>
-                        <input type="text" placeholder="Search Student" />
-                        <h3>Assignment Names</h3>
-                        <input type="text" placeholder="Search Assignmnet" />
+                    <div class="d-flex flex-row mb-2 w-100">
+                        <div class="w-50 me-2">
+                            <h3>Student Names</h3>
+                            <input class="form-control" type="text" placeholder="Search Student" />
+                        </div>
+                        <div class="w-50 me-2 ">
+                            <h3>Assignment Names</h3>
+                            <input class="form-control" type="text" placeholder="Search Assignmnet" />
+                        </div>
                     </div>
-                    <button class="btn btn-secondary btn-sm">Apply Filters</button>
+                    <div class="mb-2">
+                        <button class="btn btn-secondary btn-sm">Apply Filters</button>
+                    </div>
                     <table border="1" width="100%">
                         <thead>
                             <th>Student Name</th>
