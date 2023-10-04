@@ -154,7 +154,7 @@
                         <a class="list-group-item" href="#">Settings</a>
                     </li>
                 </ul>
-                <div class="wd-content-pane d-flex flex-column w-100">
+                <div class="wd-content-pane d-flex flex-column w-100 me-4">
                     <div class="mb-2">
                         <button class="btn btn-secondary float-end"><i class="fa-solid fa-gear text-white"></i></button>
                         <button class="btn btn-secondary float-end mx-1"><i
@@ -167,16 +167,17 @@
                             <h3>Student Names</h3>
                             <input class="form-control" type="text" placeholder="Search Student" />
                         </div>
-                        <div class="w-50 me-2 ">
+                        <div class="w-50">
                             <h3>Assignment Names</h3>
                             <input class="form-control" type="text" placeholder="Search Assignmnet" />
                         </div>
                     </div>
                     <div class="mb-2">
-                        <button class="btn btn-secondary btn-sm">Apply Filters</button>
+                        <button class="btn btn-secondary btn-sm"><i class="fa-solid fa-filter me-1"></i> Apply
+                            Filters</button>
                     </div>
-                    <table border="1" width="100%">
-                        <thead>
+                    <table class="table table-bordered w-100 ">
+                        <thead class="bg-light">
                             <th>Student Name</th>
                             <th>A1 - HMTL</th>
                             <th>A2 - CSS</th>
@@ -186,31 +187,111 @@
                         <tbody>
                             <tr>
                                 <td>Joe Don</td>
-                                <td>100%</td>
-                                <td>95%</td>
-                                <td>100%</td>
-                                <td>100%</td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="95%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>Melody Tran</td>
-                                <td>100%</td>
-                                <td>79%</td>
-                                <td>100%</td>
-                                <td>50%</td>
+                            <tr class="bg-light">
+                                <td class="text-danger">Melody Tran</td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="79%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="50%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Allen Michael</td>
-                                <td>100%</td>
-                                <td>90%</td>
-                                <td>86%</td>
-                                <td>100%</td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="90%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="87%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
                             </tr>
-                            <tr>
+                            <tr class="bg-light">
                                 <td>Chad Chad</td>
-                                <td>100%</td>
-                                <td>2%</td>
-                                <td>100%</td>
-                                <td>0%</td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="2%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="0%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                         <tfoot></tfoot>
