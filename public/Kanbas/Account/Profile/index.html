@@ -1,91 +1,142 @@
 <!DOCTYPE html>
 <html>
-<table width="100%">
-    <tr>
-        <td valign="top">
-            <ul>
-                <li>
-                    <a href="\Kanbas\Account">Account</a>
-                </li>
-                <li>
-                    <a href="\Kanbas\KanbasNavigation">Dashboard</a>
-                </li>
-                <li>
-                    <a href="\Kanbas\Courses">Courses</a>
-                </li>
-                <li>
-                    <a href="#">Calendar</a>
-                </li>
-                <li>
-                    <a href="#">Inbox</a>
-                </li>
-                <li>
-                    <a href="#">History</a>
-                </li>
-                <li>
-                    <a href="#">Studio</a>
-                </li>
-                <li>
-                    <a href="#">Commons</a>
-                </li>
-                <li>
-                    <a href="#">Help</a>
-                </li>
-            </ul>
-        </td>
-        <td valign="top">
-            <ul>
-                <li>
-                    <a href="#">Notifications</a>
-                </li>
-                <li>
-                    <a href="\Kanbas\Account\Profile\">Profile</a>
-                </li>
-                <li>
-                    <a href="#">Files</a>
-                </li>
-                <li>
-                    <a href="#">Settings</a>
-                </li>
-                <li>
-                    <a href="#">ePortfolios</a>
-                </li>
-                <li>
-                    <a href="#">Shared Content</a>
-                </li>
-                <li>
-                    <a href="#">The Hub</a>
-                </li>
-                <li>
-                    <a href="#">Qwickly Course Tools</a>
-                </li>
-                <li>
-                    <a href="#">Global Announcements</a>
-                </li>
-            </ul>
-        </td>
-        <td valign="top">
-            Jonathan Yu's Profile
-            <hr /> <br />
-            <form action="\Kanbas\Account\Profile\edit.html">
-                <font size="+7">Jonathan
-                    Yu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </font>
-                <button>Edit Profile</button>
-            </form>
-            <br />
-            <h2>Contact</h2>
-            <p> No registered services, you can add some on the <a href="#">settings</a> page.</p>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="../../../gen-style.css" rel="stylesheet">
+    <link href="profile.css" rel="stylesheet">
+</head>
+<title>
+    Kanbas Profile
+</title>
 
-            <h2>Bibography</h2>
-            <p> Faculty, Software engineer,AI,Space, and renewables enthusiast.</p>
-            <br />
+<body>
+    <div class="wd-container d-flex flex-row w-100">
+        <div class="wd-kanbas-nav ">
+            <div class="wd-menu_item wd-neu-logo">
+                <a href="">
+                    <img src="../../../NEU-N.png" height="45" width="54">
+                </a>
+            </div>
+            <div class="wd-menu_item wd-account_icon justify-content-center wd-active">
+                <a class="wd-red_link" href="\Kanbas\Account">
+                    <i class="fa-regular fa-circle-user fa-lg wd-center wd-grey"></i>
+                    Account</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="\Kanbas\Dashboard">
+                    <i class="fa-solid fa-gauge fa-lg wd-center"></i>
+                    Dashboard
+                </a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="\Kanbas\Courses">
+                    <i class="fa-solid fa-book fa-lg wd-center"></i>
+                    Courses
+                </a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-solid fa-calendar-days fa-lg wd-center"></i>
+                    Calendar</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-solid fa-inbox fa-lg wd-center"></i>
+                    Inbox</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-regular fa-clock fa-lg wd-center"></i>
+                    History</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-brands fa-youtube fa-lg wd-center"></i>
+                    Studio</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-solid fa-arrow-right-from-bracket fa-lg wd-center"></i>
+                    Commons</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-regular fa-circle-question fa-lg wd-center"></i>
+                    Help</a>
+            </div>
+        </div>
+        <div class="wd-right-row-pane d-flex flex-column w-100">
+            <div class="wd-top-pane">
+                <div class="wd-top-container d-flex flex-row align-middle">
+                    <button class="wd-course-nav-menu-btn">
+                        <i class="fa-solid fa-bars fa-xl"></i>
+                    </button>
+                    <div class="wd-top-text">
+                        Jonathan Yu's Profile
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <div class="wd-right-column-plane d-flex ">
+                <ul class="wd-gen-nav list-group pt-4">
+                    <li>
+                        <a class="list-group-item" href="#">Notifications</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item wd-active" href="\Kanbas\Account\Profile\">Profile</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Files</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">ePortfolios</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Shared Content</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">The Hub</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Qwickly Course Tools</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Global Announcements</a>
+                    </li>
+                </ul>
+                <div class="wd-content-pane">
+                    <div class="d-flex justify-content-between wd-profile">
+                        <i class="fa-regular fa-circle-user wd-huge-icon wd-center wd-grey"></i>
+                        <form class="wd-profile-form" action="\Kanbas\Account\Profile\edit.html">
+                            <button class="wd-btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Profile</button>
+                        </form>
+                    </div>
+                    Jonathan Yu
 
-            <h2>Links</h2>
-            <font color="blue">Youtube</font>
-        </td>
-    </tr>
-    </tbody>
-</table>
+                    <br />
+                    <h2>Contact</h2>
+                    <p> No registered services, you can add some on the <a href="#">settings</a> page.</p>
+
+                    <h2>Bibography</h2>
+                    <p> Faculty, Software engineer, AI, Space, and renewables enthusiast.</p>
+                    <br />
+
+                    <h2>Links</h2> 
+                    <a class="d-flex flow-row wd-red" target="_blank" href="https://www.youtube.com">
+                        <i class="fa-solid fa-link m-1"></i>
+                        Youtube
+                        <i class="fa-solid fa-arrow-right-from-bracket m-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 
 </html>

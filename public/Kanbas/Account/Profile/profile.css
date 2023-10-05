@@ -1,0 +1,28 @@
+select{
+    width: 220px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    height: 2.375rem;
+    line-height: 2.375rem;
+}
+
+select, input {
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+label{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+    color:#d41b2c;
+}
+
+.wd-huge-icon {
+    color: grey;
+    font-size: 200px;
+}

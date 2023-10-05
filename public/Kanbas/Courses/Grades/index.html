@@ -1,156 +1,303 @@
 <!DOCTYPE html>
 <html>
-<table width="100%" valign="TOP">
-    <tbody valign="TOP">
-        <tr valign="TOP">
-            <td valign="top">
-                <ul>
-                    <li>
-                        <a href="\Kanbas\Account">Account</a>
-                    </li>
-                    <li>
-                        <a href="\Kanbas\KanbasNavigation">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="\Kanbas\Courses">Courses</a>
-                    </li>
-                    <li>
-                        <a href="#">Calendar</a>
-                    </li>
-                    <li>
-                        <a href="#">Inbox</a>
-                    </li>
-                    <li>
-                        <a href="#">History</a>
-                    </li>
-                    <li>
-                        <a href="#">Studio</a>
-                    </li>
-                    <li>
-                        <a href="#">Commons</a>
-                    </li>
-                    <li>
-                        <a href="#">Help</a>
-                    </li>
-                </ul>
-            </td>
-            <td valign="top">
-                <ul>
-                    <li>
-                        <a href="\Kanbas\Courses\Home">Home</a>
-                    </li>
-                    <li>
-                        <a href="\Kanbas\Courses\Home\Modules">Module</a>
-                    </li>
-                    <li>
-                        <a href="#">Piazza</a>
-                    </li>
-                    <li>
-                        <a href="#">Zoom Meetings</a>
-                    </li>
-                    <li>
-                        <a href="\Kanbas\Assignment">Assignment</a>
-                    </li>
-                    <li>
-                        <a href="#">Quizzes</a>
-                    </li>
-                    <li>
-                        <a href="\Kanbas\Courses\Grades">Grades</a>
-                    </li>
-                    <li>
-                        <a href="#">People</a>
-                    </li>
-                    <li>
-                        <a href="#">Panioto Video</a>
-                    </li>
-                    <li>
-                        <a href="#">Discussions</a>
-                    </li>
-                    <li>
-                        <a href="#">Announcements</a>
-                    </li>
-                    <li>
-                        <a href="#">Pages</a>
-                    </li>
-                    <li>
-                        <a href="#">Files</a>
-                    </li>
-                    <li>
-                        <a href="#">Rubrics</a>
-                    </li>
-                    <li>
-                        <a href="#">Outcomes</a>
-                    </li>
-                    <li>
-                        <a href="#">Collaborations</a>
-                    </li>
-                    <li>
-                        <a href="#">Syllabus</a>
-                    </li>
-                    <li>
-                        <a href="#">Settings</a>
-                    </li>
-                </ul>
-            </td>
-            <td valign="top">
-                <select>
-                    <option>GradeBook</option>
-                </select>
-                <button>Import</button>
-                <select>
-                    <option>Export</option>
-                </select>
-                <button>Configure</button>
-                <h3>Student Names</h3>
-                <input type="text" placeholder="Search Student" />
-                <h3>Assignment Names</h3>
-                <input type="text" placeholder="Search Assignmnet" />
-                <button>Apply Filters</button>
-                <br />
-                <br />
-                <table border="1" width="100%">
-                    <thead>
-                        <th>Student Name</th>
-                        <th>A1 - HMTL</th>
-                        <th>A2 - CSS</th>
-                        <th>A3 - JS</th>
-                        <th>A4 - PHP</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Joe Don</td>
-                            <td>100%</td>
-                            <td>95%</td>
-                            <td>100%</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Melody Tran</td>
-                            <td>100%</td>
-                            <td>79%</td>
-                            <td>100%</td>
-                            <td>50%</td>
-                        </tr>
-                        <tr>
-                            <td>Allen Michael</td>
-                            <td>100%</td>
-                            <td>90%</td>
-                            <td>86%</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Chad Chad</td>
-                            <td>100%</td>
-                            <td>2%</td>
-                            <td>100%</td>
-                            <td>0%</td>
-                        </tr>
-                    </tbody>
-                    <tfoot></tfoot>
-                </table>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <link href="../../../gen-style.css" rel="stylesheet" />
+</head>
+<title>
+    Kanbas Home
+</title>
 
+<body>
+    <div class="wd-container d-flex flex-row w-100">
+        <div class="wd-kanbas-nav ">
+            <div class="wd-menu_item wd-neu-logo">
+                <a href="">
+                    <img src="../../../NEU-N.png" height="45" width="54">
+                </a>
+            </div>
+            <div class="wd-menu_item wd-account_icon justify-content-center">
+                <a class="wd-white_link" href="\Kanbas\Account">
+                    <i class="fa-solid fa-circle-user fa-lg wd-center"></i>
+                    Account</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="\Kanbas\Dashboard">
+                    <i class="fa-solid fa-gauge fa-lg wd-center"></i>
+                    Dashboard
+                </a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center wd-active">
+                <a class="wd-red_link" href="\Kanbas\Courses">
+                    <i class="fa-solid fa-book fa-lg wd-center"></i>
+                    Courses
+                </a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-solid fa-calendar-days fa-lg wd-center"></i>
+                    Calendar</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-solid fa-inbox fa-lg wd-center"></i>
+                    Inbox</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-regular fa-clock fa-lg wd-center"></i>
+                    History</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-brands fa-youtube fa-lg wd-center"></i>
+                    Studio</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-solid fa-arrow-right-from-bracket fa-lg wd-center"></i>
+                    Commons</a>
+            </div>
+            <div class="wd-menu_item d-flex justify-content-center">
+                <a class="wd-white_link" href="#">
+                    <i class="fa-regular fa-circle-question fa-lg wd-center"></i>
+                    Help</a>
+            </div>
+        </div>
+        <div class="wd-right-row-pane d-flex flex-column">
+            <div class="wd-top-pane">
+                <div class="wd-top-container d-flex flex-row align-middle">
+                    <button class="wd-course-nav-menu-btn">
+                        <i class="fa-solid fa-bars fa-xl"></i>
+                    </button>
+                    <div class="wd-top-text">
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="#">CS 4550</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Grades</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <div class="wd-right-column-plane d-flex w-100">
+                <ul class="wd-gen-nav list-group pt-4">
+                    <div class="wd-semester-text wd-ellipsis text-secondary">
+                        202410_1 Fall 2023 Semester
+                    </div>
+                    <li>
+                        <a class="list-group-item" href="\Kanbas\Courses\Home">Home</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Module</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Piazza</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Zoom Meetings</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="\Kanbas\Assignment">Assignment</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Quizzes</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item wd-active" href="\Kanbas\Courses\Grades">Grades</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">People</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Panioto Video</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Discussions</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Announcements</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Pages</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Files</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Rubrics</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Outcomes</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Collaborations</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Syllabus</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#">Settings</a>
+                    </li>
+                </ul>
+                <div class="wd-content-pane d-flex flex-column w-100 me-4">
+                    <div class="mb-2">
+                        <button class="btn btn-secondary float-end"><i class="fa-solid fa-gear text-white"></i></button>
+                        <button class="btn btn-secondary float-end mx-1"><i
+                                class="fa-solid fa-file-export text-white"></i> Export</button>
+                        <button class="btn btn-secondary float-end"><i class="fa-solid fa-file-import text-white"></i>
+                            Import</button>
+                    </div>
+                    <div class="d-flex flex-row mb-2 w-100">
+                        <div class="w-50 me-2">
+                            <h3>Student Names</h3>
+                            <input class="form-control" type="text" placeholder="Search Student" />
+                        </div>
+                        <div class="w-50">
+                            <h3>Assignment Names</h3>
+                            <input class="form-control" type="text" placeholder="Search Assignmnet" />
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <button class="btn btn-secondary btn-sm"><i class="fa-solid fa-filter me-1"></i> Apply
+                            Filters</button>
+                    </div>
+                    <table class="table table-bordered w-100 ">
+                        <thead class="bg-light">
+                            <th>Student Name</th>
+                            <th>A1 - HMTL</th>
+                            <th>A2 - CSS</th>
+                            <th>A3 - JS</th>
+                            <th>A4 - PHP</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger">Joe Don</td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="95%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-light">
+                                <td class="text-danger">Melody Tran</td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="79%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="50%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-danger">Allen Michael</td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="90%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="87%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-light">
+                                <td class="text-danger">Chad Chad</td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="2%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="100%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flew-row"><input class="form-control w-75 m-auto text-center"
+                                            type="text" value="0%">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mt-3 pe-1 fa-xl"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
