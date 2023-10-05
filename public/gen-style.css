@@ -50,6 +50,11 @@ hr {
     max-width: 200px;
     min-width: 190px;
     flex-wrap: wrap;
+    margin-left: 109px;
+}
+
+.wd-top-pane {
+    margin-left: 109px;
 }
 
 ul.wd-gen-nav .list-group-item{
@@ -93,6 +98,7 @@ ul.wd-gen-nav .list-group-item:active, ul.wd-gen-nav .wd-active{
 }
 
 .wd-kanbas-nav {
+    position: fixed;
     background-color: black;
     color: white;
     max-width: 85px;
