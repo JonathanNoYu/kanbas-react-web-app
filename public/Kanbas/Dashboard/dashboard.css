@@ -16,6 +16,7 @@
 .wd-dashboard-card-container {
     padding: 15px;
     flex-wrap: wrap;
+    margin-left: 109px;
 }
 
 .card {
