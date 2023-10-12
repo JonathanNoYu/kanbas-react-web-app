@@ -1,24 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import Labs from "./Labs";
+import HelloWorld from "./Labs/a3/HelloWorld";
+import Kanbas from "./Kanbas";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="\lab1\a1\index.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Link to index.html
-        </a>
-      </header>
-    </div>
-  );
+   return (
+      <div>
+         <HelloWorld/>
+         <Labs/>
+         <Kanbas/>
+      </div>
+   );
 }
-
 export default App;
