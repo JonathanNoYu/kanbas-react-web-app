@@ -1,19 +1,29 @@
 import { Link, useLocation } from "react-router-dom";
 import "../../gen-style.css"
+import db from "../Database"
+import iconThis from "./iconThis"
 
 function KanbasNavigation() {
-  const links = ["Account", "Dashboard", "Courses", "Calendar","Inbox","History","Studio","Commons","Help"];
+  const links = db.kanbasNav
+  //const links = ["Account", "Dashboard", "Courses", "Calendar","Inbox","History","Studio","Commons","Help"];
   const { pathname } = useLocation();
   return (
     <div className="wd-kanbas-nav">
       {links.map((link, index) => (
-        <Link
-          key={index}
-          to={`/Kanbas/${link}`}
-          className={`wd-menu_item d-flex justify-content-center wd-white_link ${pathname.includes(link) && "active"}`}>
-          {link}
-        </Link>
+        <div className={`wd-menu_item justify-content-center 
+        ${link.name.includes("Account") ? "wd-account_icon" : "d-flex"}
+        ${pathname.includes(link.name) ? "wd-active" : ""}`}>
+          <Link
+            key={index}
+            to={`/Kanbas/${link.name}`}
+            className={`d-flex flex-column  
+            ${pathname.includes(link.name) ? "wd-red_link" : "wd-white_link"}`}>
+              {iconThis(link, pathname)}
+              {link.name.includes("NEU") ? "" : link.name}
+          </Link>
+        </div>
       ))}
+      
     </div>
   );
 }

@@ -8,7 +8,6 @@ import { Routes, Route, Navigate } from "react-router";
 function App() {
    return (
       <HashRouter>
-         <div>
             <Routes>
                <Route path="/" element={<Navigate to="/Labs" />} />
                <Route path="/PreReact/*" element={<PreReact />} />
@@ -16,7 +15,6 @@ function App() {
                <Route path="/hello" element={<HelloWorld />} />
                <Route path="/kanbas/*" element={<Kanbas />} />
             </Routes>
-         </div>
       </HashRouter>
    );
 }

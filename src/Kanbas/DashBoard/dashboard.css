@@ -1,0 +1,59 @@
+.wd-top-container {
+    padding: 16px;
+    padding-left: 4px;
+}
+
+.wd-top-text {
+    color: black;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.wd-dashboard-pane {
+    padding: 10px;
+}
+
+.wd-dashboard-card-container {
+    padding: 15px;
+    flex-wrap: wrap;
+    margin-left: 109px;
+}
+
+.card {
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    width: 262px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 36px 0 0 36px;
+}
+
+.wd-card-rectangle {
+    box-sizing: border-box;
+    height: 146px;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.wd-card-title {
+    font-size: 16px;
+    color: rgb(80, 80, 204);
+    margin-bottom: 1px;
+}
+
+a{
+    color: none;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #d12e2e;
+    text-decoration: underline;
+}
+
+.card-text {
+    font-size: 16px;
+    color: black;
+}

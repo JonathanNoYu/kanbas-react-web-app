@@ -6,16 +6,19 @@ function CourseNavigation() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   return (
-    <div className="list-group" style={{ width: 150 }}>
+    <ul className="wd-gen-nav list-group pt-4 rounded-0">
+      <div class="wd-semester-text wd-ellipsis text-secondary">
+        202410_1 Fall 2023 Semester
+      </div>
       {links.map((link, index) => (
         <Link
           key={index}
           to={`/Kanbas/Courses/${courseId}/${link}`}
-          className={`list-group-item ${pathname.includes(link) && "active"}`}>
+          className={`list-group-item ${pathname.includes(link) ? "wd-active" : ""}`}>
           {link}
         </Link>
       ))}
-    </div>
+    </ul>
   );
 }
 

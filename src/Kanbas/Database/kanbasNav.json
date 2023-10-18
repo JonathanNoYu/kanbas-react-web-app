@@ -1,0 +1,13 @@
+[
+    { "_id": "0", "name": "NEU", "icon-type":"img", "src":"../res/NEU-N.png", "icon_class": "d_none"},
+    { "_id": "1", "name": "Account", "icon-type":"i", "src":"", "icon": "fa-circle-user fa-lg wd-center"},
+    { "_id": "2", "name": "Dashboard", "icon-type":"i", "src":"", "icon_class": "fa-solid fa-gauge fa-lg wd-center"},
+    { "_id": "5", "name": "Courses", "icon-type":"i", "src":"", "icon_class": "fa-solid fa-book fa-lg wd-center"},
+    { "_id": "6", "name": "Calendar", "icon-type":"i", "src":"", "icon_class": "fa-solid fa-calendar-days fa-lg wd-center"},
+    { "_id": "7", "name": "Inbox", "icon-type":"i", "src":"", "icon_class": "fa-solid fa-inbox fa-lg wd-center"},
+    { "_id": "8", "name": "History", "icon-type":"i", "src":"", "icon_class": "fa-regular fa-clock fa-lg wd-center"},
+    { "_id": "9", "name": "Studio", "icon-type":"i", "src":"", "icon_class": "fa-brands fa-youtube fa-lg wd-center"},
+    { "_id": "10", "name": "Commons", "icon-type":"i", "src":"", "icon_class": "fa-solid fa-arrow-right-from-bracket fa-lg wd-center"},
+    { "_id": "11", "name": "Help", "icon-type":"i", "src":"", "icon_class": "fa-regular fa-circle-question fa-lg wd-center"}
+]
+  
