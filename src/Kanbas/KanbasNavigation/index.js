@@ -15,7 +15,7 @@ function KanbasNavigation() {
         ${pathname.includes(link.name) ? "wd-active" : ""}`}>
           <Link
             key={index}
-            to={`/Kanbas/${link.name}`}
+            to={`${link.name.includes("NEU") ? "/Kanbas/Dashboard" : `/Kanbas/${link.name}`}`}
             className={`d-flex flex-column  
             ${pathname.includes(link.name) ? "wd-red_link" : "wd-white_link"}`}>
               {iconThis(link, pathname)}

@@ -107,6 +107,7 @@ ul.wd-gen-nav .list-group-item:active, ul.wd-gen-nav .wd-active{
     min-width: 75px;
     border: none;
     height: 100%;
+    width: 100%;
     margin-right: 25px;
 }
 

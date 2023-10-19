@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 function iconThis(link, pathname) {
     switch (link.name) {
         case 'NEU':
-            return (<img className="d-block m-auto" src="./NEU-N.png" alt="NEU LOGO" height="40px" width="45px"></img>);
+            return (<img className="d-block m-auto" src="./NEU-N.png" alt="NEU LOGO" height="45px" width="54px"></img>);
         case 'Account':
             return (<FaRegCircleUser className={`fa-xl d-block m-auto ${pathname.includes("Account") ? "wd-grey" : ""}`}/>);
         case 'Dashboard':
