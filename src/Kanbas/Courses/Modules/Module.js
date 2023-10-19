@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 function CollapseList(module, firstModule, assignmnet, open, setOpen) {
     if (firstModule && assignmnet) {
         return (
-            <Button className="btn-light rounded-0 wd-text-left"
+            <Button className="rounded-0 wd-text-left" variant="secondary"
             onClick={() => setOpen(!open)}
             aria-controls={`${module.collapse}`}
             aria-expanded={open}>
@@ -20,7 +20,7 @@ function CollapseList(module, firstModule, assignmnet, open, setOpen) {
     }
     if (firstModule) {
         return (
-            <Button className="btn-light rounded-0 wd-text-left"
+            <Button className="rounded-0 wd-text-left" variant="secondary"
             onClick={() => setOpen(!open)}
             aria-controls={`${module.collapse}`}
             aria-expanded={open}>
@@ -34,11 +34,14 @@ function CollapseList(module, firstModule, assignmnet, open, setOpen) {
     }
     else {
         return (
-            <div className="list-group-item">
-                    <FaGripVertical className="pe-3 text-success" />
-                    {module.name}
-                    <FaEllipsisVertical className="fa-xl text-black float-end mt-2" />
-                    <FaCircleCheck className="float-end wd-green me-4 text-success" />
+            <div className="list-group-item d-flex flex-row w-100">
+                        <FaGripVertical className="pe-3 text-success" />
+                        <div className="d-flex flex-column">
+                            <div>{module.name}</div>
+                            <div>- {module.description}</div>
+                        </div>
+                        <FaEllipsisVertical className="fa-xl text-black float-right mt-3" />
+                        <FaCircleCheck className="float-right wd-green me-4 mt-3 text-success" />
             </div>
         );
     }

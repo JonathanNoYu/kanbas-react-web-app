@@ -1,7 +1,10 @@
-import { React, useState} from "react";
+import { React, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import CollapseList from "../Modules/Module";
+import LinkedCollapseLink from "./LinkedCollapseList";
+import "./assignment.css"
+import { Collapse } from "react-bootstrap";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -11,20 +14,16 @@ function Assignments() {
     (assignment) => assignment.course === courseId);
   const firstAssignment = courseAssignments[0]
   return (
-    <div>
+    <ul className="list-group">
       {CollapseList(firstAssignment, true, true, open, setOpen)}
-      <h2>Assignments for course {courseId}</h2>
-      <div className="list-group">
-        {courseAssignments.map((assignment) => (
-          <Link
-            key={assignment._id}
-            to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="list-group-item">
-            {assignment.title}
-          </Link>
-        ))}
-      </div>
-    </div>
+      <Collapse in={open}>
+        <div id={`${firstAssignment.collapse}`}>
+          {courseAssignments.map((assignment) => (
+            LinkedCollapseLink(assignment, courseId, open, setOpen)
+          ))}
+        </div>
+      </Collapse>
+    </ul>
   );
 }
 export default Assignments;

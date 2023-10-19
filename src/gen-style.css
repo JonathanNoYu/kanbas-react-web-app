@@ -301,3 +301,11 @@ a{
 .wd-text-left {
     text-align: left !important;
 }
+
+.float-right {
+    float: right;
+}
+
+.wd-font-size {
+    font-size: 22px;
+}

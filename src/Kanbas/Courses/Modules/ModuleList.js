@@ -10,7 +10,7 @@ function ModuleList() {
   const modules = db.modules.filter((module) => module.course === courseId);
   const firstModule = modules[0]
   return (
-    <ul className="list-group">
+    <ul className="list-group w-100">
       {CollapseList(firstModule, true, false, open, setOpen)}
       <Collapse in={open}>
         <div id={`${modules[0].collapse}`}>

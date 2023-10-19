@@ -10,29 +10,34 @@ import { FaBars } from "react-icons/fa6";
 
 function Courses() {
   const { courseId } = useParams();
+  const course = db.courses.filter(course => course._id === courseId)
   const currPage =  useParams()['*'];
-  const crumbs = useLocation().pathname.split("/").filter(crumb => crumb !== "" && crumb !== 'Kanbas' && crumb !== "Courses")
-  console.log(crumbs)
+  const pathname = useLocation().pathname;
+  const crumbs = pathname.split("/")
+  .filter(crumb => crumb !== "" && crumb !== 'Kanbas' && crumb !== "Courses")
+  crumbs[0] = course[0].number
   return (
     <div className="wd-right-row-pane d-flex flex-column w-100">
       <div className="wd-top-pane">
         <div className="wd-top-container d-flex flex-row align-middle">
           <button className="wd-course-nav-menu-btn">
-            <FaBars/>
+            <FaBars size="1.5em"/>
           </button>
           <div className="wd-top-text">
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb m-0">
-                {crumbs.map((crumb) => {
+                {crumbs.map((crumb, index) => {
                   return(
-                    <Link className={`breadcrumb-item ${currPage.includes(crumb) ? "active wd-no-underline" : "wd-red wd-no-underline-standalone"}`} to={`/Kanbas/Courses/${courseId}`}>{crumb}</Link>
+                    <Link className={`breadcrumb-item wd-font-size ${currPage.includes(crumb) ? "active wd-no-underline" : "wd-red wd-no-underline-standalone"}`} 
+                    to={`${createPathName(pathname.split("/").filter(name => name !== ""), index + 3)}`}>
+                      {crumb}</Link>
                   );
                 })}
               </ol>
             </nav>
           </div>
         </div>
-        <hr />
+        <hr className="m-0 p-0" />
       </div>
       <div className="wd-right-column-plane d-flex">
         <CourseNavigation />
@@ -52,3 +57,11 @@ function Courses() {
   );
 }
 export default Courses;
+
+function createPathName(crumbs, index) {
+  var path = ""
+  for (let i = 0; i < index; i++) {
+    path = path + "/" + crumbs[i] 
+  }
+  return path
+} 
