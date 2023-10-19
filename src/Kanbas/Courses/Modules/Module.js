@@ -35,13 +35,15 @@ function CollapseList(module, firstModule, assignmnet, open, setOpen) {
     else {
         return (
             <div className="list-group-item d-flex flex-row w-100">
-                        <FaGripVertical className="pe-3 text-success" />
-                        <div className="d-flex flex-column">
+                        <FaGripVertical size={28}  className="pe-3 text-success mt-2" />
+                        <div className="flex-column m-auto ms-0">
                             <div>{module.name}</div>
-                            <div>- {module.description}</div>
+                            - {module.description}
                         </div>
-                        <FaEllipsisVertical className="fa-xl text-black float-right mt-3" />
-                        <FaCircleCheck className="float-right wd-green me-4 mt-3 text-success" />
+                        <div className="flex-row-reverse">
+                            <FaEllipsisVertical className="fa-xl text-black text-end float-end mt-3" />
+                            <FaCircleCheck className="float-end text-end wd-green mt-3 text-success" />
+                        </div>
             </div>
         );
     }

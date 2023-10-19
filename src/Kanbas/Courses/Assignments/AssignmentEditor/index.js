@@ -16,7 +16,7 @@ function AssignmentEditor() {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   return (
-    <div className="wd-content-pane w-75 d-flex flex-column">
+    <div className="wd-content-pane d-flex flex-column">
       <div class="wd-top-content-pane">
         <div class="d-flex flex-row float-end">
           <FaCircleCheck className="float-end text-success wd-green me-1 mt-2" />
@@ -30,7 +30,7 @@ function AssignmentEditor() {
       <input value={assignment.name}
         className="form-control mb-2" />
       <textarea className="form-control py-5">{assignment.description}</textarea>
-      <div class="d-flex flex-column m-auto mt-3  w-50">
+      <div class="d-flex flex-column m-auto mt-3 w-50">
         <div class="d-flex flew-row mt-4">
           <h8 class="m-auto">Points</h8>
           <input class="form-control w-75" type="number" value="100" />
@@ -131,10 +131,10 @@ function AssignmentEditor() {
       <div className="float-right flex-row">
         <div className="float-right">
           <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
-            className="pull-right btn btn-danger">
+            className="btn btn-outline-secondary me-2 bg-light text-black wd-no-underline">
             Cancel
           </Link>
-          <Button onClick={handleSave} className="pull-right btn btn-success me-2">
+          <Button onClick={handleSave} className="btn btn-danger me-2">
             Save
           </Button>
         </div>

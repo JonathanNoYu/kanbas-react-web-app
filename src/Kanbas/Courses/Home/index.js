@@ -1,17 +1,18 @@
 import ModuleList from "../Modules/ModuleList";
 import Dropdown from 'react-bootstrap/Dropdown';
 import "./home.css"
+import { useState } from "react";
 
 function Home() {
+  var [open, setOpen] = useState(false)
   return (
     <div className="wd-right-column-plane d-flex w-100">
       <div className="w-100 me-5">
         <div className="wd-module-menu float-end">
-          <button className="btn btn-secondary btn-sm" data-bs-toggle="collapse"
-            data-bs-target=".multi-collapse" aria-expanded="false">Collapse
+          <button className="btn btn-secondary btn-sm ms-2" onClick={() => setOpen(false)}>Collapse
             All</button>
-          <button className="btn btn-secondary btn-sm">View Progress</button>
-          <button className="btn btn-secondary dropdown-toggle btn-sm" type="button"
+          <button className="btn btn-secondary btn-sm ms-2">View Progress</button>
+          <button className="btn btn-secondary dropdown-toggle btn-sm ms-2" type="button"
             data-bs-toggle="dropdown" aria-expanded="false"><i
               className="fa-regular fa-check-circle mx-1" aria-hidden="true"></i>Publish
             All</button>
@@ -20,7 +21,7 @@ function Home() {
             <li><a className="dropdown-item" href="#">Another action</a></li>
             <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
-          <button className="btn-danger btn btn-sm"><i className="fa fa-plus" aria-hidden="true"></i>
+          <button className="btn-danger btn btn-sm ms-2"><i className="fa fa-plus" aria-hidden="true"></i>
             Modules</button>
         </div>
         <hr className="mt-5 w-100" />
