@@ -309,3 +309,7 @@ a{
 .wd-font-size {
     font-size: 22px;
 }
+
+.wd-bg-grey, .btn-secondary {
+    background: lightgrey;
+}

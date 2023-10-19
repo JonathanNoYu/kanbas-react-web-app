@@ -21,8 +21,8 @@ function AssignmentEditor() {
         <div class="d-flex flex-row float-end">
           <FaCircleCheck className="float-end text-success wd-green me-1 mt-2" />
           <h7 class="text-success font-weight-bold mt-1 me-3">Published</h7>
-          <button class="btn btn-secondary btn-sm float-end ms-2">
-            <FaEllipsisVertical /></button>
+          <Button class="btn btn-secondary btn-sm float-end ms-2">
+            <FaEllipsisVertical /></Button>
         </div>
       </div>
       <hr class="my-2" />
