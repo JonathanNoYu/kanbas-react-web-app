@@ -1,16 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import helloReducer from "../a4/ReduxExamples/HelloRedux/helloReducer.js";
-
-import store from "./store";
-import { Provider } from "react-redux";
-function Labs() {
-  return (
-    <Provider store={store}>
-      <div className="container">
-        <h1>Labs</h1>
-        ...
-      </div>
-    </Provider>
-  );
-}
-export default Labs;
+import helloReducer from "../a4/ReduxExamples/HelloRedux/helloReducer";
+import counterReducer from "../a4/ReduxExamples/CounterRedux/counterReducer";
+import addReducer from "../a4/ReduxExamples/AddRedux/addReducer";
+import todosReducer from "../a4/ReduxExamples/todos/todosReducer";
+const store = configureStore({
+  reducer: {
+    helloReducer,
+    counterReducer,
+    addReducer,
+    todosReducer
+  },
+});
+export default store;
