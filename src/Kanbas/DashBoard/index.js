@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import db from "../Database";
 import courseCard from "./courseCard";
 import "./dashboard.css"
+import { useState } from "react";
 
 function Dashboard() {
-  const courses = db.courses;
+  const [courses, setCourses] = useState(db.courses);
   return (
     <div className="wd-right-row-pane d-flex flex-column w-100">
       <div class="wd-top-pane">
