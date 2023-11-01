@@ -9,17 +9,17 @@ import { Collapse } from "react-bootstrap";
 function Assignments() {
   const { courseId } = useParams();
   const [open, setOpen] = useState(false);
-  const assignments = db.assignments;
-  const courseAssignments = assignments.filter(
+  const filter_assignments = db.assignments.filter(
     (assignment) => assignment.course === courseId);
-  const firstAssignment = courseAssignments[0]
+  const [assignments, setAssignments] = useState(filter_assignments)
+  const collapse_id = assignments[0].collapse
   return (
     <ul className="list-group">
-      {CollapseList(firstAssignment, true, true, open, setOpen)}
+      {CollapseList(assignments, 0, true, setAssignments, null, true, open, setOpen)}
       <Collapse in={open}>
-        <div id={`${firstAssignment.collapse}`}>
-          {courseAssignments.map((assignment) => (
-            LinkedCollapseLink(assignment, courseId, open, setOpen)
+        <div id={`${collapse_id}`}>
+          {assignments.map((assignment) => (
+            LinkedCollapseLink(assignment, courseId, open, setOpen, assignments, setAssignments)
           ))}
         </div>
       </Collapse>
