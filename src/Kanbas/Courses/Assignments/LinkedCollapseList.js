@@ -10,7 +10,7 @@ function LinkedCollapseLink(assignment, courseId, open, setOpen, assignments, se
       };
     return (
         <div className="list-group-item">
-            <Button className="rounded-0 wd-text-left float-end" variant="secondary"
+            <Button className="wd-text-left float-end"  variant="danger"
                             onClick={() => deleteAssignment(assignment._id)}>
                             Delete
             </Button>

@@ -15,7 +15,7 @@ function Assignments() {
   const collapse_id = assignments[0].collapse
   return (
     <ul className="list-group">
-      {CollapseList(assignments, 0, true, setAssignments, null, true, open, setOpen)}
+      {CollapseList(assignments[0], true, true, open, setOpen)}
       <Collapse in={open}>
         <div id={`${collapse_id}`}>
           {assignments.map((assignment) => (

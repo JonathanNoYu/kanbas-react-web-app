@@ -1,13 +1,17 @@
 import { React, useState } from "react";
 import { FaGripVertical, FaEllipsisVertical, FaCircleCheck, FaCaretDown, FaPlus } from "react-icons/fa6";
 import Button from 'react-bootstrap/Button';
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
 
-function CollapseList(modules, index, firstModule, setModules, setModule, assignmnet, open, setOpen) {
-    const module = modules[index];
-    const deleteModule = (moduleId) => {
-        setModules(modules.filter(
-          (module) => module._id !== moduleId));
-      };
+function CollapseList(module, firstModule, assignmnet, open, setOpen) {
+    console.log(module);
+    const dispatch = useDispatch();
     if (firstModule && assignmnet) {
         return (
             <Button className="rounded-0 wd-text-left" variant="secondary"
@@ -47,11 +51,11 @@ function CollapseList(modules, index, firstModule, setModules, setModule, assign
                 </div>
                 <div className="flex-row-reverse">
                     <Button className="mx-2 float-end" variant="secondary"
-                        onClick={(event) => { setModule(module); }}>
+                        onClick={() => dispatch(setModule(module))}>
                         Edit
                     </Button>
                     <Button className="wd-text-left float-end" variant="danger"
-                        onClick={() => deleteModule(module._id)}>
+                        onClick={() => dispatch(deleteModule(module._id))}>
                         Delete
                     </Button>
                     <FaEllipsisVertical className="fa-xl text-black text-end float-end mt-3" />
