@@ -3,13 +3,13 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 function courseCard(course, setCourse, deleteCourse) {
     return (
-        <div className="list-group-item">
+        <div key={course._id} className="list-group-item">
             <div className="card" style={{ width: "18rem" }}>
-                <Link key={course._id} to={`/Kanbas/Courses/${course._id}`}
-                    className="wd-card-rectangle bg-success position-relative">
+                <Link to={`/Kanbas/Courses/${course._id}`}
+                    className="wd-card-rectangle bg-success">
                     <FaEllipsisVertical className="text-white float-end m-2" />
                 </Link>
-                <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="card-body">
+                <Link to={`/Kanbas/Courses/${course._id}`} className="card-body">
                     <p className="wd-card-title">{course.number} {course.name}</p>
                     <p className="card-text">{course.number}</p>
                 </Link>
