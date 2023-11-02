@@ -9,7 +9,7 @@ function CourseNavigation() {
   const { pathname } = useLocation();
   return (
     <ul className="wd-gen-nav list-group pt-4 rounded-0">
-      <div class="wd-semester-text wd-ellipsis text-secondary">
+      <div className="wd-semester-text wd-ellipsis text-secondary">
         202410_1 Fall 2023 Semester
       </div>
       {links.map((link, index) => (

@@ -22,7 +22,6 @@ function ModuleList() {
   const firstModule = modules[0]
   const collapse_id = firstModule.collapse
 
-  console.log(modules)
   return (
     <ul className="list-group w-100">
       <li className="list-group-item">

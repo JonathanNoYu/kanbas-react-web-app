@@ -3,18 +3,15 @@ import { FaGripVertical, FaEllipsisVertical, FaCircleCheck, FaCaretDown, FaPlus 
 import Button from 'react-bootstrap/Button';
 import { useSelector, useDispatch } from "react-redux";
 import {
-  addModule,
   deleteModule,
-  updateModule,
   setModule,
 } from "./modulesReducer";
 
 function CollapseList(module, firstModule, assignmnet, open, setOpen) {
-    console.log(module);
     const dispatch = useDispatch();
     if (firstModule && assignmnet) {
         return (
-            <Button className="rounded-0 wd-text-left" variant="secondary"
+            <Button key={module._id} className="rounded-0 wd-text-left" variant="secondary"
                 onClick={() => setOpen(!open)}
                 aria-controls={`${module.collapse}`}
                 aria-expanded={open}>
@@ -23,13 +20,13 @@ function CollapseList(module, firstModule, assignmnet, open, setOpen) {
                 {module.name}
                 <FaEllipsisVertical className="mt-1 float-end" />
                 <FaPlus className="float-end mt-1 me-3" />
-                <div class="rounded float-end bg-light px-1 mx-1 text-black">{module.percent}</div>
+                <div className="rounded float-end bg-light px-1 mx-1 text-black">{module.percent}</div>
             </Button>
         );
     }
     if (firstModule) {
         return (
-            <Button className="rounded-0 wd-text-left" variant="secondary"
+            <Button key={module._id} className="rounded-0 wd-text-left" variant="secondary"
                 onClick={() => setOpen(!open)}
                 aria-controls={`${module.collapse}`}
                 aria-expanded={open}>
@@ -43,7 +40,7 @@ function CollapseList(module, firstModule, assignmnet, open, setOpen) {
     }
     else {
         return (
-            <div className="list-group-item d-flex flex-row w-100">
+            <div key={module._id} className="list-group-item d-flex flex-row w-100">
                 <FaGripVertical size={28} className="pe-3 text-success mt-2" />
                 <div className="flex-column m-auto ms-0">
                     <div>{module.name}</div>

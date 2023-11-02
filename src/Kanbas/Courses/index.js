@@ -9,14 +9,14 @@ import Grades from "./Grades";
 import { FaBars } from "react-icons/fa6";
 
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
-  const course = db.courses.filter(course => course._id === courseId)
+  const course = courses.find((course) => course._id === courseId);
   const currPage =  useParams()['*'];
   const pathname = useLocation().pathname;
   const crumbs = pathname.split("/")
   .filter(crumb => crumb !== "" && crumb !== 'Kanbas' && crumb !== "Courses")
-  crumbs[0] = course[0].number
+  crumbs[0] = course.number
   return (
     <div className="wd-right-row-pane d-flex flex-column w-100">
       <div className="wd-top-pane">
@@ -29,7 +29,7 @@ function Courses() {
               <ol className="breadcrumb m-0">
                 {crumbs.map((crumb, index) => {
                   return(
-                    <Link className={`breadcrumb-item wd-font-size ${currPage.includes(crumb) ? "active wd-no-underline" : "wd-red wd-no-underline-standalone"}`} 
+                    <Link key={crumb} className={`breadcrumb-item wd-font-size ${currPage.includes(crumb) ? "active wd-no-underline" : "wd-red wd-no-underline-standalone"}`} 
                     to={`${createPathName(pathname.split("/").filter(name => name !== ""), index + 3)}`}>
                       {crumb}</Link>
                   );

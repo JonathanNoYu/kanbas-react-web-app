@@ -10,7 +10,7 @@ function KanbasNavigation() {
   return (
     <div className="wd-kanbas-nav">
       {links.map((link, index) => (
-        <div className={`wd-menu_item justify-content-center 
+        <div key={link._id} className={`wd-menu_item justify-content-center 
         ${link.name.includes("Account") ? "wd-account_icon" : "d-flex"}
         ${pathname.includes(link.name) ? "wd-active" : ""}`}>
           <Link
