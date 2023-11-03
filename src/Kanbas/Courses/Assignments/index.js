@@ -12,6 +12,7 @@ function Assignments() {
   const filter_assignments = db.assignments.filter(
     (assignment) => assignment.course === courseId);
   const [assignments, setAssignments] = useState(filter_assignments)
+  if (assignments.length > 0) {
   const collapse_id = assignments[0].collapse
   return (
     <ul className="list-group">
@@ -24,6 +25,10 @@ function Assignments() {
         </div>
       </Collapse>
     </ul>
-  );
+  );}
+  else {
+    <ul className="list-group">
+    </ul>
+  }
 }
 export default Assignments;
