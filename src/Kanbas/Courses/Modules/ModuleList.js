@@ -19,6 +19,7 @@ function ModuleList() {
   modules = modules.filter((module) => module.course === courseId);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+  if (modules.length > 0) {
   const firstModule = modules[0]
   const collapse_id = firstModule.collapse
 
@@ -55,6 +56,33 @@ function ModuleList() {
         </div>
       </Collapse>
     </ul>
-  );
+  );}
+  else {
+    return (
+      <ul className="list-group w-100">
+        <li className="list-group-item">
+          <Button className='float-end me-1' 
+            onClick={() => dispatch(updateModule(module))}>
+                  Update
+          </Button>
+          <Button className='float-end me-1' variant="success" 
+            onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+            Add
+            </Button>
+          <div className='d-flex flex-column'>
+            <input className='w-50 mb-1' value={module.name}
+              onChange={(e) =>
+                dispatch(setModule({ ...module, name: e.target.value }))
+              }/>
+            <textarea className='w-50 rounded-2' value={module.description}
+              onChange={(e) =>
+                dispatch(setModule({ ...module, description: e.target.value }))
+              }/>
+          </div>
+        </li>
+      </ul>
+    );
+  }
+  
 }
 export default ModuleList;

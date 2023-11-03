@@ -1,12 +1,10 @@
-import db from "../Database";
 import courseCard from "./courseCard";
 import "./dashboard.css"
-import { useState } from "react";
 import { Button } from "react-bootstrap";
 
 function Dashboard(
   { courses, course, setCourse, addNewCourse,
-  deleteCourse, updateCourse }
+    deleteCourse, updateCourse }
 ) {
   return (
     <div className="wd-right-row-pane d-flex flex-column w-100">
@@ -27,14 +25,16 @@ function Dashboard(
           </div>
           <hr />
           <h5>Course</h5>
-          <Button className='float-end me-1' variant="success"
-            onClick={addNewCourse}>
-            Add
-          </Button>
-          <Button className='float-end me-1' 
-            onClick={updateCourse} >
-            Update
-          </Button>
+          <div className="mx-5">
+            <Button className='float-end me-1' variant="success"
+              onClick={addNewCourse}>
+              Add
+            </Button>
+            <Button className='float-end me-1'
+              onClick={updateCourse} >
+              Update
+            </Button>
+          </div>
           <input value={course.name} className="form-control w-25"
             onChange={(e) => setCourse({ ...course, name: e.target.value })} />
           <input value={course.number} className="form-control w-25"
