@@ -46,12 +46,11 @@ function WorkingWithArrays() {
     };
     const updateTodo = async () => {
         const response = await axios.put(
-          `${API}/${todo.id}`, todo);
+            `${API}/${todo.id}`, todo);
         setTodos(todos.map((t) => (
-          t.id === todo.id ? todo : t)));
+            t.id === todo.id ? todo : t)));
         setTodo({});
-      };
-    
+    };
     return (
         <div>
             <h3>Working with Arrays</h3>
@@ -97,8 +96,8 @@ function WorkingWithArrays() {
                 Post Todo
             </button>
             <button onClick={updateTodo}>
-        Update Todo
-      </button>
+                Update Todo
+            </button>
             <button onClick={updateTitle}
                 className="btn btn-success mb-2 w-100">
                 Update Title
