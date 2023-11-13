@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Button } from "react-bootstrap";
 
 function WorkingWithArrays() {
     const API = "http://localhost:4000/a5/todos";
@@ -92,39 +93,39 @@ function WorkingWithArrays() {
                 />
                 Completed
             </label>
-            <button onClick={postTodo} >
+            <Button onClick={postTodo} variant="warning">
                 Post Todo
-            </button>
-            <button onClick={updateTodo}>
+            </Button>
+            <Button onClick={updateTodo}>
                 Update Todo
-            </button>
-            <button onClick={updateTitle}
+            </Button>
+            <Button onClick={updateTitle}
                 className="btn btn-success mb-2 w-100">
                 Update Title
-            </button>
-            <button onClick={createTodo}
+            </Button>
+            <Button onClick={createTodo}
                 className="btn btn-primary mb-2 w-100">
                 Create Todo
-            </button>
+            </Button>
             <ul className="list-group">
                 {todos.map((todo) => (
                     <li key={todo.id}
                         className="list-group-item">
-                        <button
+                        <Button
                             onClick={() => deleteTodo(todo)}
                             className="btn btn-danger float-end ms-2">
                             Delete
-                        </button>
-                        <button
+                        </Button>
+                        <Button
                             onClick={() => fetchTodoById(todo.id)}
                             className="btn btn-warning me-2 float-end" >
                             Edit
-                        </button>
-                        <button
+                        </Button>
+                        <Button
                             onClick={() => removeTodo(todo)}
                             className="btn btn-danger float-end" >
                             Remove
-                        </button>
+                        </Button>
                         <input
                             checked={todo.completed}
                             type="checkbox" readOnly

@@ -8,7 +8,6 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import { FaBars } from "react-icons/fa6";
 
-
 function Courses({ courses }) {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
