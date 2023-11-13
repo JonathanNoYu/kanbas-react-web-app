@@ -1,3 +1,5 @@
+import SimpleAPIExamples from "./SimpleAPIExamples"
+
 function Assignment5() {
     return (
       <div>
@@ -8,7 +10,7 @@ function Assignment5() {
             Welcome
           </a>
         </div>
-        <SimpleAPIExamples />
+        <SimpleAPIExamples/>
       </div>
     );
   }
