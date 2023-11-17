@@ -1,6 +1,5 @@
-import { useState, React } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-import db from "../../Database";
 import CollapseList from "./Module";
 import Collapse from 'react-bootstrap/Collapse';
 import { Button } from 'react-bootstrap';
@@ -10,28 +9,45 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import * as client from "./client";
 
 function ModuleList() {
   const [open, setOpen] = useState(false);
   const { courseId } = useParams();
+  useEffect(() => {
+    client.findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
   var modules = useSelector((state) => state.modulesReducer.modules);
   modules = modules.filter((module) => module.course === courseId);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
   if (modules.length > 0) {
   const firstModule = modules[0]
   const collapse_id = firstModule.collapse
-
   return (
     <ul className="list-group w-100">
       <li className="list-group-item">
         <Button className='float-end me-1' 
-          onClick={() => dispatch(updateModule(module))}>
+          onClick={() => handleUpdateModule(module)}>
                 Update
         </Button>
         <Button className='float-end me-1' variant="success" 
-          onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+          onClick={() => handleAddModule}>
           Add
           </Button>
         <div className='d-flex flex-column'>
@@ -66,7 +82,7 @@ function ModuleList() {
                   Update
           </Button>
           <Button className='float-end me-1' variant="success" 
-            onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+            onClick={() => dispatch(handleAddModule)}>
             Add
             </Button>
           <div className='d-flex flex-column'>

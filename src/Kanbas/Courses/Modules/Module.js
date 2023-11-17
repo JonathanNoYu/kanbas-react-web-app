@@ -3,12 +3,19 @@ import { FaGripVertical, FaEllipsisVertical, FaCircleCheck, FaCaretDown, FaPlus 
 import Button from 'react-bootstrap/Button';
 import { useSelector, useDispatch } from "react-redux";
 import {
-  deleteModule,
-  setModule,
+    deleteModule,
+    setModule,
 } from "./modulesReducer";
+import * as client from "./client";
 
 function CollapseList(module, firstModule, assignmnet, open, setOpen) {
     const dispatch = useDispatch();
+    const handleDeleteModule = (moduleId) => {
+        client.deleteModule(moduleId).then((status) => {
+            dispatch(deleteModule(moduleId));
+        });
+    };
+
     if (firstModule && assignmnet) {
         return (
             <Button key={module._id} className="rounded-0 wd-text-left" variant="secondary"
@@ -52,7 +59,7 @@ function CollapseList(module, firstModule, assignmnet, open, setOpen) {
                         Edit
                     </Button>
                     <Button className="wd-text-left float-end" variant="danger"
-                        onClick={() => dispatch(deleteModule(module._id))}>
+                        onClick={() => handleDeleteModule(module._id)}>
                         Delete
                     </Button>
                     <FaEllipsisVertical className="fa-xl text-black text-end float-end mt-3" />
