@@ -10,7 +10,8 @@ import axios from "axios";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
-  const URL = "http://localhost:4000/api/courses";
+  // const URL = "http://localhost:4000/api/courses";
+  const URL = "https://kanbas-node-server-app-xrhy.onrender.com/api/courses";
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);
@@ -24,7 +25,7 @@ function Kanbas() {
   });
   const addNewCourse = async () => {
     const response = await axios.post(URL, course);
-    setCourses([response.data, ...courses, { ...course, _id: new Date().getTime().toString() }]);
+    setCourses([response.data, ...courses]);
   };
   const deleteCourse = async (courseId) => {
     const response = await axios.delete(
@@ -32,7 +33,7 @@ function Kanbas() {
     );
     setCourses(courses.filter((course) => course._id !== courseId));
   };
-  const updateCourse = async (course) => {
+  const updateCourse = async () => {
     const response = await axios.put(
       `${URL}/${course._id}`,
       course

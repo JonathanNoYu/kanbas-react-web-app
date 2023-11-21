@@ -6,7 +6,6 @@ import { Button } from 'react-bootstrap';
 import { useSelector, useDispatch } from "react-redux";
 import {
   addModule,
-  deleteModule,
   updateModule,
   setModule,
   setModules,
@@ -16,16 +15,15 @@ import * as client from "./client";
 function ModuleList() {
   const [open, setOpen] = useState(false);
   const { courseId } = useParams();
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
   useEffect(() => {
     client.findModulesForCourse(courseId)
       .then((modules) =>
         dispatch(setModules(modules))
-    );
+      );
   }, [courseId]);
-  var modules = useSelector((state) => state.modulesReducer.modules);
-  modules = modules.filter((module) => module.course === courseId);
-  const module = useSelector((state) => state.modulesReducer.module);
-  const dispatch = useDispatch();
   const handleAddModule = () => {
     client.createModule(courseId, module).then((module) => {
       dispatch(addModule(module));
@@ -37,68 +35,72 @@ function ModuleList() {
   };
 
   if (modules.length > 0) {
-  const firstModule = modules[0]
-  const collapse_id = firstModule.collapse
-  return (
-    <ul className="list-group w-100">
-      <li className="list-group-item">
-        <Button className='float-end me-1' 
-          onClick={() => handleUpdateModule(module)}>
-                Update
-        </Button>
-        <Button className='float-end me-1' variant="success" 
-          onClick={() => handleAddModule}>
-          Add
-          </Button>
-        <div className='d-flex flex-column'>
-          <input className='w-50 mb-1' value={module.name}
-            onChange={(e) =>
-              dispatch(setModule({ ...module, name: e.target.value }))
-            }/>
-          <textarea className='w-50 rounded-2' value={module.description}
-            onChange={(e) =>
-              dispatch(setModule({ ...module, description: e.target.value }))
-            }/>
-        </div>
-      </li>
-      {CollapseList(firstModule, true, false, open, setOpen)}
-      <Collapse in={open}>
-        <div id={`${collapse_id}`}>
-          {
-            modules.map((module, index) => (
-                CollapseList(module, false, false)
-              ))
-          }
-        </div>
-      </Collapse>
-    </ul>
-  );}
-  else {
+    const firstModule = modules[0]
+    const collapse_id = firstModule.collapse
     return (
       <ul className="list-group w-100">
         <li className="list-group-item">
-          <Button className='float-end me-1' 
-            onClick={() => dispatch(updateModule(module))}>
-                  Update
+          <Button className='float-end me-1'
+            onClick={() => handleUpdateModule(module)}>
+            Update
           </Button>
-          <Button className='float-end me-1' variant="success" 
-            onClick={() => dispatch(handleAddModule)}>
+          <Button className='float-end me-1' variant="success"
+            onClick={() => {
+              handleAddModule()}}>
             Add
-            </Button>
+          </Button>
           <div className='d-flex flex-column'>
             <input className='w-50 mb-1' value={module.name}
               onChange={(e) =>
                 dispatch(setModule({ ...module, name: e.target.value }))
-              }/>
+              } />
             <textarea className='w-50 rounded-2' value={module.description}
               onChange={(e) =>
                 dispatch(setModule({ ...module, description: e.target.value }))
-              }/>
+              } />
+          </div>
+        </li>
+        {CollapseList(firstModule, true, false, open, setOpen)}
+        <Collapse in={open}>
+          <div id={`${collapse_id}`}>
+            {
+              modules.map((module, index) => (
+                CollapseList(module, false, false)
+              ))
+            }
+          </div>
+        </Collapse>
+      </ul>
+    );
+  }
+  else {
+    return (
+      <ul className="list-group w-100">
+        <li className="list-group-item">
+          <Button className='float-end me-1'
+            onClick={() => dispatch(updateModule(module))}>
+            Update
+          </Button>
+          <Button className='float-end me-1' variant="success"
+            onClick={() => {
+              handleAddModule();
+            }}>
+            Add
+          </Button>
+          <div className='d-flex flex-column'>
+            <input className='w-50 mb-1' value={module.name}
+              onChange={(e) =>
+                dispatch(setModule({ ...module, name: e.target.value }))
+              } />
+            <textarea className='w-50 rounded-2' value={module.description}
+              onChange={(e) =>
+                dispatch(setModule({ ...module, description: e.target.value }))
+              } />
           </div>
         </li>
       </ul>
     );
   }
-  
+
 }
 export default ModuleList;
