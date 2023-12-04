@@ -1,5 +1,5 @@
 import Signin from "../Kanbas/Users/signin";
-import Signup from "../Kanbas/Users/signUp";
+import Signup from "../Kanbas/Users/signup";
 import Account from "../Kanbas/Users/account";
 import UserTable from "../Kanbas/Users/table";
 import { Routes, Route, Navigate } from "react-router-dom";
