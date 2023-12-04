@@ -1,24 +1,34 @@
 import * as client from "./client";
 import { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate,useParams, Link } from "react-router-dom";
 function Account() {
+  const { id } = useParams();
   const [account, setAccount] = useState(null);
   const navigate = useNavigate();
-  const fetchAccount = async () => {
-    const account = await client.account();
-    setAccount(account);
-  };
-  useEffect(() => {
-    fetchAccount();
-  }, []);
-  const save = async () => {
-    await client.updateUser(account);
+  const findUserById = async (id) => {
+    console.log(id)
+    const user = await client.findUserById(id);
+    setAccount(user);
   };
   const signout = async () => {
     await client.signout();
     navigate("/project/signin");
   };
+  const fetchAccount = async () => {
+    const account = await client.account();
+    setAccount(account);
+  };
+  const save = async () => {
+    await client.updateUser(account);
+  };
+  useEffect(() => {
+    if (id) {
+      findUserById(id);
+    } else {
+      fetchAccount();
+    }
+  }, []);
   return (
     <div className="w-50">
       <h1>Account</h1>
