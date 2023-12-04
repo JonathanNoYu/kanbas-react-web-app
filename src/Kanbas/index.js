@@ -12,7 +12,10 @@ import Signin from "./Users/signin";
 function Kanbas() {
   const [courses, setCourses] = useState([]);
   // const URL = "http://localhost:4000/api/courses";
-  const URL = "https://kanbas-node-server-app-xrhy.onrender.com/api/courses";
+  const API_BASE = process.env.REACT_APP_BASE_API_URL;
+  const URL = `${API_BASE}/courses`;
+  console.log(URL)
+  const COURSES_URL = "https://kanbas-node-server-app-xrhy.onrender.com/api/courses";
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);
